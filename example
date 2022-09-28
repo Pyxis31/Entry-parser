@@ -1,0 +1,29 @@
+#include <fsjslib.h>
+
+char* pcharValueEntry;
+int Value;
+		
+// Parse characters
+EntryParser.pcharEntry=pcharValueEntry;
+EntryParser.type=typeInteger;
+EntryParser.min=0; // min
+EntryParser.max=9999; // max
+fEntryIsIntOrFloat(&EntryParser);
+if (EntryParser.errNumber!=0)
+{
+	printf(EntryParser.pcharErrMessage);
+}
+else
+{
+	Value=EntryParser.intResult;
+}
+
+/*
+For floating data :
+
+EntryParser.type=typeFloat;
+EntryParser.min=-DBL_MAX; // min
+EntryParser.max=DBL_MAX; // max
+..
+Value=EntryParser.floatResult;
+*/
