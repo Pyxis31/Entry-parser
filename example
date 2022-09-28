@@ -21,6 +21,8 @@ else
 /*
 For floating data :
 
+double Value;
+
 EntryParser.type=typeFloat;
 EntryParser.min=-DBL_MAX; // min
 EntryParser.max=DBL_MAX; // max
